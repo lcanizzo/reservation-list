@@ -57,10 +57,10 @@
           for (var i = 0; i < data.length; i++) {
             var reservation = $("<div>");
             reservation.addClass("well");
-            reservation.attr("id", "character-well-" + i);
+            reservation.attr("id", "dataTables" + i);
             $("#well-section").append(reservation);
     
-            $("#character-well-" + i).append("<h2>" + data[i].id + "</h2>");
+            $("#dataTables" + i).append("<h2>" + data[i].id + "</h2>");
            
           }
         });
@@ -68,10 +68,10 @@
           for (var i = 0; i < data.length; i++) {
             var wellSection = $("<div>");
             wellSection.addClass("well");
-            wellSection.attr("id", "character-well-" + i);
+            wellSection.attr("id", "waitList" + i);
             $("#well-section1").append(wellSection);
     
-            $("#character-well-" + i).append("<h2>" + data[i].id + "</h2>");
+            $("#waitList" + i).append("<h2>" + data[i].id + "</h2>");
            
           }
         });
