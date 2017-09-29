@@ -1,4 +1,3 @@
-
 // D E P E N D E N C I E S 
 const express = require ('express');
 const bodyParser = require('body-parser');
@@ -22,32 +21,25 @@ let reservations = [
     },
 ];
 
-app.get('/', function(req, res){
+// P A G E   R O U T I N G
+app.get('/', function(req,res){
+    res.sendFile(path.join(__dirname, "new-reservation.html"));
+});
 
-
-})
-
-app.get('/tables', function(req,res){
-
-
-})
+app.get('/tables', function(req, res){
+    res.sendFile(path.join(__dirname, 'tables.html'));
+    // res.json(reservations);    
+});
 
 app.post('/', function(req, res){
-
     var newReservation = req.body;
-
-    // newReservation.id = newReservation.id.replace(/\s+/g, "").toLowerCase();
+    // newReservation.id = newReservation.age.replace(/\s+/g, "").toLowerCase();
     // console.log(newReservation);
-
+    
     reservations.push(newReservations)
-
     res.json(newReservation)
 })
 
-
-
-
-
 app.listen(PORT, function(){
-    console.log("PORT 8888 is running.");
+    console.log('listening on:', PORT);
 })
