@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/lcanizzo/reservation-list/issues"
   },
-  "homepage": "https://github.com/lcanizzo/reservation-list#readme"
+  "homepage": "https://github.com/lcanizzo/reservation-list#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.0",
+    "path": "^0.12.7"
+  }
 }
