@@ -11,32 +11,37 @@
 </head>
 <body>
   
-   <script type="text/javascript">
+   <script>
     
-        $.get("/", function(data) {
-          for (var i = 0; i < data.length; i++) {
-            if(data.length > 2){
-              //post to waitlist
-              console.log("too many");
+        // $.get("/", function(data) {
+        //   for (var i = 0; i < data.length; i++) {
+        //     //if(data.length > 2){
+        //       //post to waitlist
+        //       //console.log("too many");
 
-            }else{
-              //post to reservation list
-              console.log("you are all set");
-            }
-            var reservation = $("<div>");
-            reservation.addClass("well");
-            reservation.attr("id", "res-well-" + i);
-            $("#well-section").append(reservation);
+        //     //}else{
+        //       //post to reservation list
+        //     //   console.log("you are all set");
+        //     // }
+        //     var reservation = $("<div>");
+        //     reservation.addClass("well");
+        //     reservation.attr("id", "res-well-" + i);
+        //     $("#well-section").append(reservation);
+
+        //   $.get("/", function(data) {
+        // for (var i = 0; i < data.length; i++) {
+
+        
     
-            $("#res-well-" + i).append("<h2>" + data[i].id + "</h2>");
-          }
-        });
+        //     $("#res-well-" + i).append("<h2>" + data[i].id + "</h2>");
+        //   }
+        // });
       </script>
     
 
 
 
-  </script>
+  
 
   <div class= "container text-center">
       <div class="jumbotron">
