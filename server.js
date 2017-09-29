@@ -33,6 +33,15 @@ app.get('/tables', function (req, res) {
     // res.json(reservations);    
 });
 
+app.get('/data_tables', function(req, res){
+    res.json(reservations);        
+})
+
+app.get('/data_waitlist', function(req, res){
+    res.json(waitlist);        
+})
+
+
 app.post('/', function (req, res) {
 
     var newReservation = req.body;
