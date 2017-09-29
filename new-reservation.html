@@ -64,21 +64,25 @@
               </div>
        
     
-    <script>
-        //var name = "";
+     <script type="text/javascript">
+    
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var newReservation = {
+        name: $("#name").val().trim(),
+        phone: $("#phone").val().trim(),
+        email: $("#email").val().trim(),
+        id: $("#id").val().trim()
+      };
 
-        //var email = "";
-
-        //var ID = "";
-        
-
-            $("#submit").on('click', function(event){ 
-                console.log("clicked");
-
-
-        })
-        
-    </script>
+      // Question: What does this code do??
+      $.post("/", newReservation)
+      .done(function(data) {
+        console.log(data);
+        alert("Adding Reservation...");
+      });
+    });
+  </script>
 
     
 </body>

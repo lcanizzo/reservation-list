@@ -53,11 +53,12 @@
   <script type="text/javascript">
     
         $.get("/data_tables", function(data) {
+            console.log(data)
           for (var i = 0; i < data.length; i++) {
             var reservation = $("<div>");
-            wellSection.addClass("well");
-            wellSection.attr("id", "character-well-" + i);
-            $("#well-section").append(wellSection);
+            reservation.addClass("well");
+            reservation.attr("id", "character-well-" + i);
+            $("#well-section").append(reservation);
     
             $("#character-well-" + i).append("<h2>" + data[i].id + "</h2>");
            
